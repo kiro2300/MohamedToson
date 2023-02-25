@@ -1,0 +1,204 @@
+.About{
+    position: relative;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .behance{
+        place-self: center;
+        position: absolute;
+        top: 30px;
+        z-index: 50;
+        width: 60%;
+        min-width: 600px;
+        height: 5.6vw;
+        background-color: rgb(240, 240, 240);
+        border-radius: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 70%;
+            p{
+                margin: 0px 0px;
+                font-weight: bold;
+            }
+            #number{
+                color: #F28C2E;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+        img{
+            margin-left: 2vw;
+            width: auto;
+            height: 70%;
+            aspect-ratio: 2/2;
+        }
+    }
+    
+    .content{
+        position: absolute;
+        width: 50vw;
+        left: 0;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 10vw;
+        grid-column: 1;
+        h2{
+            font-weight: bold;
+            font-size: 45px;
+            margin: 0;
+        }
+        #name{
+            color: #F28C2E;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p{
+            font-weight: 300;
+            font-size: 17px;
+            margin: 5px 0;
+            color:#383838;
+        }
+    }
+    .Img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: row-reverse;
+        grid-column: 2;
+        .Mohamed{
+            width: 600px;
+            object-fit: contain;
+            object-position: right;
+        }
+        .Arow{
+            position: absolute;
+            right: -16vw;
+            top: -2vw;
+            width: 660px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: right;
+            }
+        }
+    }
+    .buttons{
+        button{
+            margin-right: 20px;
+            margin-top: 20px;
+            padding: 15px;
+            width: 110px;
+            border: none;
+            background-color: #F28C2E;
+            color: white;
+            transition: 0.2s;
+            font-size: 14px;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.05);
+            }
+            &:nth-child(2){
+                background-color: #383838;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .About{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 250px  550px ;
+        align-items: start;
+        justify-content: center;
+        .behance{
+            display: none;
+        }
+        .content{
+            grid-column: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            padding-top: 90px;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            grid-row: 1;
+            z-index: 5000;
+            .buttons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                place-content: center;
+                place-items: center;
+                button{
+                    margin: 15px 0;
+                    margin-right: 10px;
+                    &:first-child{
+                        margin-left: 16px;
+                    }
+                }
+            }
+            p{
+                width: 90%;
+                text-align: center;
+            }
+        }
+        .Img{
+            grid-column: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: row;
+            width: 100%;
+            grid-row: 2;
+            .Mohamed{
+                width: 100%;
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                object-fit: contain;
+                object-position: right;
+                max-width: 500px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .Arow{
+                position: absolute;
+                right: -16%;
+                top: 26%;
+                width: 400px;
+                img{
+                    width: 200px;
+                    object-fit: contain;
+                    object-position: right;
+                }
+            }
+        }
+    }
+}

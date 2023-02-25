@@ -1,0 +1,38 @@
+.Navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 5000000;
+    margin: 0;
+    ul{
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        list-style: none;
+        padding: 10px 20px;
+        transition: 0.2s;
+        li{
+            margin: 15px;
+            cursor: pointer;
+            a{
+                font-weight: 600;
+                 color: white;
+                 text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:455px) {
+    .Navbar{
+        ul{
+            li{
+                display: none;
+            }
+        }
+    }
+}

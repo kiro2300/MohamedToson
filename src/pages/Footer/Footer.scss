@@ -1,0 +1,37 @@
+.Footer{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .Logo{
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        p{
+            color: #F28C2E;
+            font-weight: bold;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .copyright{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        color: black;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
